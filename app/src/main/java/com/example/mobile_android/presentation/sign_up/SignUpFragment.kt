@@ -124,8 +124,7 @@ class SignUpFragment : Fragment() {
         @JvmStatic
         fun newInstance() =
             SignUpFragment().apply {
-                arguments = Bundle().apply {
-                }
+                arguments = Bundle()
             }
     }
 

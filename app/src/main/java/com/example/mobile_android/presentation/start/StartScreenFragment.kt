@@ -16,7 +16,6 @@ import timber.log.Timber
 
 class StartScreenFragment : Fragment() {
     private val viewModel by viewModels<UserViewModel> { UserViewModelFactory() }
-
     private val adapter = UserAdapter()
 
     override fun onCreateView(
@@ -33,7 +32,7 @@ class StartScreenFragment : Fragment() {
         val photoRecyclerView: RecyclerView = view.findViewById(R.id.photo_list)
         photoRecyclerView.adapter = adapter
         photoRecyclerView.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
         initViewModel()
         viewModel.getUsers()
